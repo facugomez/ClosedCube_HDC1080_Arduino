@@ -142,7 +142,7 @@ uint16_t ClosedCube_HDC1080::readData(uint8_t pointer) {
 	Wire.write(pointer);
 	Wire.endTransmission();
 	
-	delay(9);
+	delay(20); //Modified from 9 to 20ms
 	Wire.requestFrom(_address, (uint8_t)2);
 
 	byte msb = Wire.read();
